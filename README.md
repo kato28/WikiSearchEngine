@@ -100,3 +100,5 @@ récupèrent ces données.
 
 <h3>6. Diagramme de classe UML</h3>
 
+<img class="rounded float-center" placholder="wikilogo" src="https://raw.githubusercontent.com/kato28/WikiSearchEngine/master/Searchrequest/src/main/diag.png">
+
