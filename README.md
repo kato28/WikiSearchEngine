@@ -3,6 +3,11 @@ moteur de recherche des pages wikipédia
 Moteur de recherche en Java qui permet de chercher des mot-clés dans toutes les pages wikipedia françaises.
 Classement des pages selon l’algorithme PageRank. 
 Développement du server en Java EE.
+
+<img class="rounded float-center" placholder="wikilogo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRICHytvMRU7HwEY5Ygbmrgr8zkRECoc3I9rlStGN9BzLhD9z3l">
+
+
+
 <h3>1. Initiation au fichier XML de Wikipedia</h3>
 
 Wikipedia propose des copies de tout son contenu dans des fichiers appelés dump
