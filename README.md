@@ -3,7 +3,7 @@ moteur de recherche des pages wikipédia
 Moteur de recherche en Java qui permet de chercher des mot-clés dans toutes les pages wikipedia françaises.
 Classement des pages selon l’algorithme PageRank. 
 Développement du server en Java EE.
-<h1>1. Initiation au fichier XML de Wikipedia</h1>
+<h3>1. Initiation au fichier XML de Wikipedia</h3>
 
 Wikipedia propose des copies de tout son contenu dans des fichiers appelés dump
 sous différents formats (XML, SQL...). Dans le cadre de ce projet, j'ai utilisé le
@@ -25,7 +25,7 @@ de la page Wikipedia, celui qui va rediriger l’utilisateur vers celle-ci. Le d
 celui utilisé dans le texte courant.
 j'ai donc pris cette remarque en considération lorsque j'ai établi la
 matrice CLI.
-  <h1>2. Parsing et Corpus</h1>
+  <h3>2. Parsing et Corpus</h3>
   
   Afin d’éviter les complications que le traitement d’un gros fichier pourrait entraîner, il
 nous a demandé de travailler avec un sous-ensemble cohérent des pages Wikipedia
@@ -44,7 +44,7 @@ ArrayList<String>. Cela se fait dans la classe ParseFile.java (package main).
 La classe Optimizer, abrite, entre autres, des fonctions statiques de suppression des
 Stopwords et des accents et cédilles à savoir deleteStopWords et replaceOddChar.
   
-  <h2>Choix technique:</h2>
+  <h5>Choix technique:</h5>
   j'ai utilisé l’API StAX de Java pour parcourir le fichier XML. j'ai en
 effet, étudié le choix entre la librairie SAX et StAX et j'ai conclus que cette dernière
 utilise la technique du stream qui est plus efficace et moins coûteuse.
@@ -53,7 +53,7 @@ Le parsing du fichier a en effet, pris beaucoup de temps (dans les environs de 6
 heures). 
 
 
-<h1>3. Matrice CLI:</h1>
+<h3>3. Matrice CLI:</h3>
 
 Les pages de Wikipedia sont représentée par un graphe dont les sommets sont les
 pages et les arcs sont les liens. Comme la matrice d’adjacence comporte beaucoup de
@@ -76,7 +76,7 @@ Finalement, afin de construire la liste L, on ajoute à son contenu d’avant, l
 liens sortants. Une liste L qui a des valeurs répétitives sur certaines colonnes veut dire
 que la page concernée n’a pas de liens sortant.
 
-<h1>4. Calcul du PageRank</h1>
+<h3>4. Calcul du PageRank</h3>
 
 Le calcul du pagerank se fait en plusieurs itérations, la première met à jour un vecteur
 initialisé à 1/N avec N étant le nombre de pages. L’algorithme tire profit des listes C, L
@@ -85,7 +85,7 @@ valeur qui s’approche du 0. Le dumping factor utilisé nous permet de régler 
 problème des impasses et le facteur zap nous permet de régler le problèmes des
 coefficients nuls. La somme des pagerank converge vers 1.
 
-<h1>5. Sauvegarde des données</h1>
+<h3>5. Sauvegarde des données</h3>
 
 Etant donnée que les calculs prennent énormément du temps, il me semblait
 judicieux d’enregistrer les résultats dans des fichiers Serializable. La classe utilisée à
@@ -93,5 +93,5 @@ cet effet est SaveData.java, les fonctions dont le nom commence par “write” 
 résultat dans un fichier serializable et les fonctions dont le nom commence par “get”
 récupèrent ces données.
 
-<h1>6. Diagramme de classe UML</h1>
+<h3>6. Diagramme de classe UML</h3>
 
