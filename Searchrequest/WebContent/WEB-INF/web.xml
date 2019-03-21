@@ -9,4 +9,23 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+  	<servlet-name>Home</servlet-name>
+  	<servlet-class>servlet.Home</servlet-class>
+  </servlet>
+   <servlet>
+  	<servlet-name>ServletRequest</servlet-name>
+  	<servlet-class>servlet.ServletRequest</servlet-class>
+  </servlet>
+   <servlet-mapping>
+   	<servlet-name>Home</servlet-name>
+   	<url-pattern>/home</url-pattern>
+   </servlet-mapping>
+    <servlet-mapping>
+   	<servlet-name>ServletRequest</servlet-name>
+   	<url-pattern>/ServletRequest</url-pattern>
+   </servlet-mapping>
+   <listener>  
+    <listener-class>servlet.ContextListener</listener-class>
+	</listener>  
 </web-app>
